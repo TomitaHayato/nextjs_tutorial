@@ -1,0 +1,41 @@
+0 verbose cli /usr/local/bin/node /usr/local/lib/node_modules/npm/bin/npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.14.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/root/next_app/.npmrc
+5 silly config load:file:/root/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm exec create-next-app@latest nextjs-dashboard --example https://github.com/vercel/next-learn/tree/main/dashboard/starter-example --use-pnpm
+8 verbose argv "exec" "--" "create-next-app@latest" "nextjs-dashboard" "--example" "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example" "--use-pnpm"
+9 verbose logfile logs-max:10 dir:/root/.npm/_logs/2025-04-09T13_02_59_537Z-
+10 verbose logfile /root/.npm/_logs/2025-04-09T13_02_59_537Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 http fetch GET 200 https://registry.npmjs.org/npm 205ms
+14 http fetch GET 200 https://registry.npmjs.org/create-next-app 286ms (cache miss)
+15 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+16 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+17 silly idealTree buildDeps
+18 silly fetch manifest create-next-app@15.2.5
+19 silly packumentCache full:https://registry.npmjs.org/create-next-app cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/create-next-app 373ms (cache miss)
+21 silly packumentCache full:https://registry.npmjs.org/create-next-app set size:undefined disposed:false
+22 silly placeDep ROOT create-next-app@15.2.5 OK for:  want: 15.2.5
+23 silly reify moves {}
+24 silly audit bulk request { 'create-next-app': [ '15.2.5' ] }
+25 http cache create-next-app@https://registry.npmjs.org/create-next-app/-/create-next-app-15.2.5.tgz 0ms (cache hit)
+26 silly tarball no local data for create-next-app@https://registry.npmjs.org/create-next-app/-/create-next-app-15.2.5.tgz. Extracting by manifest.
+27 http fetch GET 200 https://registry.npmjs.org/create-next-app/-/create-next-app-15.2.5.tgz 156ms (cache miss)
+28 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 215ms
+29 silly audit report {}
+30 verbose cwd /root/next_app
+31 verbose os Linux 6.10.14-linuxkit
+32 verbose node v22.14.0
+33 verbose npm  v10.9.2
+34 notice
+34 notice New [31mmajor[39m version of npm available! [31m10.9.2[39m -> [34m11.3.0[39m
+34 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.3.0[39m
+34 notice To update run: [4mnpm install -g npm@11.3.0[24m
+34 notice  { force: true, [Symbol(proc-log.meta)]: true }
+35 verbose exit 1
+36 verbose code 1
