@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/root
+      - ./next_app:/root/next_app
+    tty: true
+    working_dir: /root/next_app
+    command: "yarn dev"
+    # Typescriptでホットリロードを有効化する
+    environment:
+      - WATCHPACK_POLLING=true
