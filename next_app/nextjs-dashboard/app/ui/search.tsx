@@ -9,10 +9,10 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const pathname = usePathname();
   const { replace } = useRouter();
 
+  // ユーザーが検索クエリを入力した際の処理
   const handleSearch = useDebouncedCallback((words) => {
-
     const params = new URLSearchParams(searchParams);
-    console.log(words);
+    params.set('page', '1');
     if(words) {
       params.set('query', words);
     } else {
