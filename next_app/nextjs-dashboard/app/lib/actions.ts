@@ -1,4 +1,7 @@
 'use server';
+
+import { signIn } from '@/auth';
+import { AuthError } from 'next-auth';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import postgres from 'postgres';
@@ -101,4 +104,23 @@ export const deleteInvoice = async(id: string, formData: FormData) => {
     console.log(e)
   }
   revalidatePath('dashboard/invoices');
+}
+
+export const authenticate = async(
+  prevState: string | undefined,
+  formData: FormData
+) => {
+  try{
+    await signIn('credentials', formData);
+  } catch(e) {
+    if(e instanceof AuthError) {
+      switch(e.type) {
+        case 'CredentialsSignin':
+          return 'invalid credentials.';
+        default:
+          return 'something went wrong.';
+      }
+    }
+    throw e;
+  }
 }
