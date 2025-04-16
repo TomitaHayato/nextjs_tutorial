@@ -1,10 +1,10 @@
 import NextAuth from 'next-auth';
-import { authConfig } from './auth.config';
 import Credentials from 'next-auth/providers/credentials';
+import { authConfig } from './auth.config';
 import { z } from 'zod';
-import postgres from 'postgres';
+import type { User } from '@/app/lib/definitions';
 import bcrypt from 'bcrypt';
-import { User } from './app/lib/definitions';
+import postgres from 'postgres';
  
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
